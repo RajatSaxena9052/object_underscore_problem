@@ -2,7 +2,11 @@ function pairs(object) {
     if (typeof object == undefined || typeof object != 'object') {
         return []
     } else {
-        return Object.entries(object)
+        let array = []
+        for (var property in object) {
+            array.push([property, object[property]])
+        }
+        return array
     }
 }
 module.exports = pairs

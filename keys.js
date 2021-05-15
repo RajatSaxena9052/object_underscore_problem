@@ -2,7 +2,11 @@ function keys(object) {
     if (typeof object == undefined || typeof object != 'object') {
         return []
     } else {
-        return Object.keys(object)
+        let keys = []
+        for (var property in object) {
+            keys.push(property)
+        }
+        return keys
     }
 }
 
