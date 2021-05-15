@@ -1,6 +1,6 @@
 function mapObjects(object, callBack) {
     if (typeof object == undefined || Array.isArray(object) == true || typeof object != 'object') {
-        return []
+        return {}
     } else {
 
         if (callBack != undefined) {
